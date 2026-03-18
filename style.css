@@ -1,0 +1,98 @@
+
+:root {
+    --docker-blue: #2496ed;
+    --bg-light: #f8f9fa;
+    --card-bg: rgba(255, 255, 255, 0.8);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-light);
+    /* Hiệu ứng vân lưới nhẹ nhàng */
+    background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.main-portal {
+    width: 850px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+    padding: 20px;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+/* Khối bên trái: Thông tin chính */
+.sidebar {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.02);
+}
+
+.docker-logo {
+    width: 100px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 5px 15px rgba(36, 150, 237, 0.3));
+}
+
+h1 { color: #1d2125; font-size: 1.5rem; margin-bottom: 10px; }
+.status-badge {
+    background: #e1f5fe;
+    color: var(--docker-blue);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Khối bên phải: Các tính năng Docker */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    border-bottom: 4px solid var(--docker-blue);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover { transform: translateY(-5px); }
+
+.feature-card h3 { color: var(--docker-blue); font-size: 0.9rem; margin-bottom: 8px; }
+.feature-card p { font-size: 0.8rem; color: #666; line-height: 1.4; }
+
+.full-width { grid-column: span 2; }
+
+.terminal-box {
+    background: #2d3436;
+    color: #fab1a0;
+    padding: 12px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    text-align: left;
+    margin-top: 10px;
+}
+
+footer {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #aaa;
+    padding-top: 10px;
+}
